@@ -23,6 +23,7 @@
 		}
 		.carousel img {
 			width: 100%;
+			height: 100%;
         }
         .tab-img{
         	width: 100%;
@@ -30,14 +31,17 @@
         hr{
         	margin-top: 30px;
         }
-        #xtabs{
-        	margin: 30px 0;
+        #xtabs .row{
+        	margin-top: 60px;
         }
         .tab-h2{
         	color: #2a6496;
         	font-size: 40px;
         	margin-top: 80px;
         }
+        #xmodal{
+			margin-top: 20%;
+		}
         
         @media (max-width: 768px) {
 
@@ -48,6 +52,9 @@
         	.tab-h2{
         		margin-top: 20px;
         	}
+        	#xmodal{
+				margin-top: 30%;
+			}
         	
         }
         @media (min-width: 992px) {
@@ -59,6 +66,9 @@
         	.tab-img{
         		width: 100%;
         	}
+        	#xmodal{
+				margin-top: 10%;
+			}
 
         }
 	</style>
@@ -257,21 +267,8 @@
 
 	
 
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.js"></script>
-	<script>
-		$(document).ready(function(){
-			$("#xnavbar a").click(function(e){
-				var href = $(this).attr("href");
-				$("#xtabs a[href='" + href + "']").tab("show");
-				e.preventDefault();
-				$(document).scrollTop($(href).offset().top - 70);
-				// $("#xnavbarbtn").click();
-				if ($(window).width()<768) {
-					$("#xnavbarbtn").click();
-				}
-			});
-    	});
-	</script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/js.js"></script>
 </body>
 </html>
